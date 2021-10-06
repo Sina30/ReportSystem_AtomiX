@@ -1,0 +1,73 @@
+<header>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</header>
+
+<body>
+	<div id="reportNotification">New Report!</div>
+    <!-- <img style="z-index: -1; width: 100%; height: 100%; overflow: hidden" src="https://64.media.tumblr.com/46bec3f2d00abbfd7d64433cbf05c7ac/b40145274763c6ba-8a/s2048x3072/7075a814dafa38851cacae29538710a9799bc7f5.png"></img>
+    <button id="load">Load List</button> -->
+    <div id="fullsize-screenshot">
+        <i class="closeicon fas fa-times fa-2x"></i>	
+        <img src="test.png" id="fullsize"></img>
+    </div>
+    <div id="reportContainer">
+        <i class="closebutton fas fa-times fa-2x"></i>	
+        <div class="reportSelected">
+            <div class="firstline-wrapper">
+                <i class="backicon fas fa-arrow-left fa-2x"></i>	
+                <div class="playerId">Player Id: 10 (danny255)</div>
+                <div class="check">
+                    <i class="fas fa-check fa-lg"></i>
+                </div>
+            </div>
+            <div class="data-wrapper">
+                <div class="title"><b>Title:</b> Anti-RP Robbery</div>
+                <div class="description"><b>Description:</b> Player robbed the bank and then alt-f4'ed.. </div>
+                <div class="playerScreenshot"><b>Screenshot:</b></div>
+                <div class="screenshot-handler"><img src="test.png"></img></div>
+                <div class="gotoplayer">GO TO PLAYER</div>
+            </div>
+        </div>
+        <div class="reportList">
+            <div class="page-title">Report List</div>
+            <div class="reports-wrapper">
+                <!-- <div class="item">
+                    <div class="firstcolumn column"><div class="player-id"><b>ID:</b> 10</div></div>
+                    <div class="secondcolumn column"><div class="report-title">Anti-RP Robbery</div></div>
+                    <div class="thirdcolumn column"><div class="solved">NOT SOLVED</div></div>
+                    <div class="forthcolumn column"> <div class="morebutton">MORE INFO</div></div>               
+                </div>
+                <div class="item">
+                    <div class="firstcolumn column"><div class="player-id"><b>ID:</b> 10</div></div>
+                    <div class="secondcolumn column"><div class="report-title">Anti-RP Robbery</div></div>
+                    <div class="thirdcolumn column"><div class="solved">NOT SOLVED</div></div>
+                    <div class="forthcolumn column"> <div class="morebutton">MORE INFO</div></div>               
+                </div>
+                <div class="item">
+                    <div class="firstcolumn column"><div class="player-id"><b>ID:</b> 10</div></div>
+                    <div class="secondcolumn column"><div class="report-title">Anti-RP Robbery</div></div>
+                    <div class="thirdcolumn column"><div class="solved">NOT SOLVED</div></div>
+                    <div class="forthcolumn column"> <div class="morebutton">MORE INFO</div></div>               
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+    <div id="reportForm">
+        <div class="pageTitle">Report Form</div>
+        <label for="inputReportTitle" class="formLabel">Title</label><br>
+        <input id="inputReportTitle" class="formInput"></input><br>
+        <label for="inputReportDescription" class="formLabel">Description</label><br>
+        <textarea id="inputReportDescription" class="formInput"></textarea><br>
+        <div class="downdiv">
+            <button id="cancelButton" class="downdiv-btns">CANCEL</button>
+            <button id="submitButton" class="downdiv-btns">SUBMIT</button>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/howler@2.2.1/dist/howler.min.js"></script>
+<script src="script.js" type="text/javascript "></script>

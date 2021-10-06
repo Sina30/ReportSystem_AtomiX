@@ -1,0 +1,352 @@
+* {
+    user-select: none;
+    font-family: 'Roboto';
+}
+
+
+#reportContainer {
+    position: absolute;
+    width: 50vw;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid black;
+    border-radius: 0.5vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.reportSelected {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: none;
+}
+
+.reportSelected .firstline-wrapper {
+    width: 100%;
+    height: 8%;
+    margin-top: 2%;
+    margin-left: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.reportSelected .playerId {
+    margin-left: 2.5%;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 5px;
+    background-color: rgba(255,255,255, 0.1);
+    border-radius: 0.2rem;
+    white-space: nowrap;
+    color: white;
+}
+
+.backicon {
+    color: white;
+}
+
+.closebutton {
+    position: absolute;
+    color: white;
+    right: 2.5%;
+    top: 2.5%;
+}
+
+.reportSelected .check {
+    margin-left: 2%;
+    width: 5%;
+    height: 80%;
+    background-color: rgba(255,255,255, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.2rem;
+}
+
+.reportSelected .check > * {
+    color: white;
+}
+
+.reportSelected .data-wrapper {
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 70%;
+    height: 82.5%;
+    color: white;
+}
+
+.reportSelected .data-wrapper .title {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+.reportSelected .data-wrapper .description {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 300;
+    word-wrap: break-word;
+    margin-top: 2.5%;
+}
+
+.reportSelected .data-wrapper .playerScreenshot {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 300;
+    word-wrap: break-word;
+    margin-top: 2.5%;
+}
+
+.reportSelected .data-wrapper .screenshot-handler {
+    width: 85%;
+    height: fit-content;
+    border: 1px solid black;
+    overflow: hidden;
+    margin-top:1%;
+}
+
+.reportSelected .data-wrapper .screenshot-handler > * {
+    width: 100%;
+}
+
+.reportSelected .data-wrapper .gotoplayer {
+    margin-top: 1.5%;
+    width: fit-content;
+    background-color: black;
+    border-radius: 0.5rem;
+    padding: 1%;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+#fullsize-screenshot {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+#fullsize-screenshot > * {
+    width: 100%;
+}
+
+#fullsize-screenshot .closeicon {
+    position: absolute;
+    z-index: 10;
+    color: black;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+    top: 1%;
+    left: 1%;
+}
+
+.reportList {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.reportList .page-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 2%;
+    margin-left: 2%;
+    color: white;
+}
+
+.reportList .reports-wrapper {
+    margin-top: 1%;
+    margin-left: 2%;
+    width: 96%;
+    height: 85%;
+    overflow: scroll;
+    overflow-x: hidden;
+
+    /* background-color: white; */
+}
+
+.reportList .reports-wrapper::-webkit-scrollbar-track {
+    background-color: transparent;
+    border: none;
+}
+
+.reportList .reports-wrapper::-webkit-scrollbar {
+    width: 2px;
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    border-radius: 5%;
+    margin-left: 20%;
+}
+
+.reportList .reports-wrapper::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 5%;
+}
+
+
+.reportList .reports-wrapper .item {
+    width: 100%;
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 0.2rem;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.reportList .reports-wrapper .item .column {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.reportList .reports-wrapper .item .firstcolumn {
+    width: 20%;
+    height: 100%;
+}
+
+.reportList .reports-wrapper .item .secondcolumn {
+    width: 40%;
+    height: 100%;
+    font-weight: 300;
+}
+
+.reportList .reports-wrapper .item .thirdcolumn {
+    width: 20%;
+    height: 100%;
+
+}
+
+.reportList .reports-wrapper .item .forthcolumn {
+    width: 20%;
+    height: 100%;
+    font-weight: 500;
+}
+
+.reportList .reports-wrapper .item .morebutton {
+    padding: 0.5rem;
+    background-color: black;
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+
+.reportList .reports-wrapper .item .solved {
+    font-weight: 400;
+}
+
+#reportForm {
+    display: none;
+    position: fixed;
+    width: 40vw;
+    height: 55vh;
+    border-radius: 0.75vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+}
+
+#reportForm .pageTitle {
+    margin-top: 2.5%;
+    width: 100%;
+    height: 10%;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
+
+.formLabel {
+    margin-left: 5%;
+    color: white;
+    font-weight: 300;
+}
+
+.formInput {
+    margin-top: 0.5%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    width: 90%;
+    border: none !important;
+    outline: none !important;
+    border-radius: 0.3vw;
+    height: 5%;
+    background: none;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#inputReportDescription {
+    height: 25%;
+    resize: none;
+}
+
+.downdiv {
+    width: 40%;
+    height: 8%;
+    position: absolute;
+    bottom: 0;
+    left: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button {
+    outline: none !important;
+    border: none !important;
+}
+
+.downdiv-btns {
+    width: 45%;
+    height: 80%;
+    border-radius: 0.5vw;
+    color: white;
+    font-weight: 500;
+}
+
+#cancelButton {
+    background-color: rgb(50,50,50);
+}
+
+#submitButton {
+    background-color: rgb(0, 0, 0);
+}
+
+#load {
+    position: fixed;
+    z-index: 1;
+    left: 5%;
+}
+#reportNotification {
+    width: 10%;
+    height: 3rem;
+    position: fixed;
+    right: 2.5%;
+    top: 2.5%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid black;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 1rem;
+    display: none;
+}
